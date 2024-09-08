@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do Task Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="menu">
+        <button onclick="showSection('add-task')">Add Task</button>
+        <button onclick="showSection('delete-task')">Delete Task</button>
+        <button onclick="showSection('task-list')">Task List</button>
+    </div>
+
+    <div id="add-task" class="section">
+        <h2>Add Task</h2>
+        <form id="taskForm">
+            <label for="taskTitle">Task Title:</label>
+            <input type="text" id="taskTitle" name="taskTitle" required><br><br>
+
+            <label for="taskDescription">Task Description:</label>
+            <textarea id="taskDescription" name="taskDescription" rows="4" cols="25" required></textarea><br><br>
+
+            <button type="button" onclick="addTask()">Add Task</button>
+        </form>
+    </div>
+
+    <div id="delete-task" class="section">
+        <h2>Delete Task</h2>
+        <p id="deleteMessage">NO TASK</p>
+    </div>
+
+    <div id="task-list" class="section">
+        <h2>Task List</h2>
+        <p id="taskMessage">NO TASK</p>
+        <ul id="taskList"></ul>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
